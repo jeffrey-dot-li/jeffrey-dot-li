@@ -1,5 +1,11 @@
 {
   "private": true,
+  "name": "Jeffrey-Dot-Li",
+  "author": {
+    "email": "jeffrey.dot.li@gmail.com",
+    "name": "Jeffrey Li",
+    "url": "jeffreydotli.me"
+  },
   "scripts": {
     "dev": "vite --port 3333 --open",
     "build": "cross-env NODE_ENV=production vite-ssg build",
@@ -30,6 +36,8 @@
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.1.6",
     "pnpm": "^6.8.0",
+    "postcss-nested": "^5.0.5",
+    "sass": "^1.35.1",
     "typescript": "^4.3.4",
     "vite": "^2.3.8",
     "vite-plugin-components": "^0.11.2",

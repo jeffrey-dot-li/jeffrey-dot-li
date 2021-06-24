@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500&family=Quicksand&family=Rubik&display=swap');
+
+.text-title {
+	font-family: "Oswald", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* .text-caveat {
+	font-family: "Caveat", "Segoe UI", Tahoma, Geneva, Verdana, cursive;
+} */
+.text-content {
+	font-family: 'Quicksand', sans-serif;;
+}
+.text-rubik
+{
+    font-family: 'Rubik', sans-serif;
+}

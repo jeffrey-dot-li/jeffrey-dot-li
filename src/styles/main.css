@@ -1,15 +1,24 @@
-@import './markdown.css';
+@import './fonts.css';
+:root {
+  --c-bg: #fff;
+  --c-scrollbar: #eee;
+  --c-scrollbar-hover: #bbb;
+}
 
-html,
-body,
-#app {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+html {
+  background-color: var(--c-bg);
+  @apply text-gray-700;
 }
 
 html.dark {
-  background: #121212;
+  --c-bg: #050505;
+  --c-scrollbar: #111;
+  --c-scrollbar-hover: #222;
+  @apply text-gray-200;
+}
+
+html {
+  overflow: scroll;
 }
 
 #nprogress {
@@ -39,5 +48,25 @@ html.dark {
   @apply inline-block cursor-pointer select-none
     opacity-75 transition duration-200 ease-in-out
     hover:opacity-100 hover:text-teal-600;
-  font-size: 0.9em;
+}
+
+* {
+  scrollbar-color: var(--c-scrollbar) var(--c-bg);
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar:horizontal {
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--c-bg);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--c-scrollbar);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--c-scrollbar-hover);
 }
