@@ -1,4 +1,5 @@
-@import './fonts.css';
+@import '../../public/fonts/fonts.css';
+
 :root {
   --c-bg: #fff;
   --c-scrollbar: #eee;

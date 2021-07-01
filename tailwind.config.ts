@@ -1,3 +1,5 @@
+/// Theoretically this should be `windi.config.ts` but my intellisense doesn't work with that so.
+
 import { defineConfig } from 'vite-plugin-windicss'
 import colors from 'windicss/colors'
 import typography from 'windicss/plugin/typography'
