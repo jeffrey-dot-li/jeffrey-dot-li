@@ -5,9 +5,7 @@
   <svg class="h-full w-full opacity-75 inset-0 absolute overflow-visible" viewBox="0 0 1152 700" preserveAspectRatio="xMidYMid slice" style="z-index: -1">
     <path d="M1155 -1V697H214.5L1155 -1Z" fill="#13EC7F" />
     <path d="M1155 -1V697H813.5L1155 -1Z" fill="#34C1EE" />
-  </svg>
-
-  <div class="text-left p-12">
+  </svg>  <div class="text-left p-12">
     <h1 class="font-bold my-6 text-banner text-6xl">
       Hi!
     </h1>
