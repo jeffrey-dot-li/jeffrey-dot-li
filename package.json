@@ -10,7 +10,18 @@
     "dev": "vite --port 3333 --open",
     "build": "cross-env NODE_ENV=production vite-ssg build",
     "preview": "vite preview",
-    "preview-https": "serve dist"
+    "preview-https": "serve dist",
+    "prepare": "husky install"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{packages,.vitepress,scripts}/**/*.{js,ts,tsx,vue,md}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@vueuse/core": "^5.0.3",
@@ -33,6 +44,7 @@
     "cross-env": "^7.0.3",
     "eslint": "^7.29.0",
     "https-localhost": "^4.6.5",
+    "husky": "^7.0.1",
     "markdown-it-link-attributes": "^3.0.0",
     "markdown-it-prism": "^2.1.6",
     "pnpm": "^6.8.0",
