@@ -1,3 +1,15 @@
 {
-  "extends": "@antfu"
+  "extends": "@antfu",
+  "rules": {
+    "@typescript-eslint/no-unused-vars": "warn",
+    "no-empty-pattern" : "warn",
+    "semi": [
+      "warn",
+      "always"
+    ],
+    "@typescript-eslint/semi": [
+      "warn",
+      "always"
+    ]
+  }
 }

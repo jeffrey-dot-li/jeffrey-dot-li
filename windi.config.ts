@@ -1,8 +1,7 @@
-/// Theoretically this should be `windi.config.ts` but my intellisense doesn't work with that so.
 
-import { defineConfig } from 'vite-plugin-windicss'
-import colors from 'windicss/colors'
-import typography from 'windicss/plugin/typography'
+import { defineConfig } from 'vite-plugin-windicss';
+import colors from 'windicss/colors';
+import typography from 'windicss/plugin/typography';
 
 export default defineConfig({
   darkMode: 'class',
@@ -12,6 +11,11 @@ export default defineConfig({
   attributify: true,
   theme: {
     extend: {
+      colors:
+      {
+        primary: '#34C1EE',
+        secondary: '#13EC7F',
+      },
       typography: {
         DEFAULT: {
           css: {
@@ -40,4 +44,4 @@ export default defineConfig({
       },
     },
   },
-})
+});

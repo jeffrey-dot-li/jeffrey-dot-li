@@ -8,6 +8,7 @@
 
 html {
   background-color: var(--c-bg);
+
   @apply text-gray-700;
 }
 
@@ -20,6 +21,7 @@ html.dark {
 
 html {
   overflow: scroll;
+  overflow-x: hidden;
 }
 
 #nprogress {
