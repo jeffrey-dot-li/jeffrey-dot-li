@@ -2,6 +2,7 @@
 import { defineConfig } from 'vite-plugin-windicss';
 import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography';
+import { FontFamilyReference } from './google-fonts';
 
 export default defineConfig({
   darkMode: 'class',
@@ -11,10 +12,11 @@ export default defineConfig({
   attributify: true,
   theme: {
     extend: {
+      fontFamily: FontFamilyReference,
       colors:
       {
-        primary: '#34C1EE',
-        secondary: '#13EC7F',
+        lavender: '#7B66FF',
+        verdant: '#66FF75',
       },
       typography: {
         DEFAULT: {

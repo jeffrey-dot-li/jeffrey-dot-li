@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "Jeffrey-Dot-Li",
+  "name": "pragma-one",
   "author": {
     "email": "jeffrey.dot.li@gmail.com",
     "name": "Jeffrey Li",
@@ -25,6 +25,7 @@
     ]
   },
   "dependencies": {
+    "@vue/composition-api": "^1.0.0-rc.14",
     "@vueuse/core": "^5.0.3",
     "@vueuse/head": "^0.6.0",
     "nprogress": "^0.2.0",

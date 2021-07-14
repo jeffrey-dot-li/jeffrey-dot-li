@@ -1,17 +1,17 @@
-import path from 'path'
-import { defineConfig } from 'vite'
-import Vue from '@vitejs/plugin-vue'
-import Pages from 'vite-plugin-pages'
-import Layouts from 'vite-plugin-vue-layouts'
-import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons'
-import ViteComponents from 'vite-plugin-components'
-import Markdown from 'vite-plugin-md'
-import WindiCSS from 'vite-plugin-windicss'
-import { VitePWA } from 'vite-plugin-pwa'
-import VueI18n from '@intlify/vite-plugin-vue-i18n'
-import Prism from 'markdown-it-prism'
+import path from 'path';
+import { defineConfig } from 'vite';
+import Vue from '@vitejs/plugin-vue';
+import Pages from 'vite-plugin-pages';
+import Layouts from 'vite-plugin-vue-layouts';
+import ViteIcons, { ViteIconsResolver } from 'vite-plugin-icons';
+import ViteComponents from 'vite-plugin-components';
+import Markdown from 'vite-plugin-md';
+import WindiCSS from 'vite-plugin-windicss';
+import { VitePWA } from 'vite-plugin-pwa';
+import VueI18n from '@intlify/vite-plugin-vue-i18n';
+import Prism from 'markdown-it-prism';
 // @ts-expect-error missing types
-import LinkAttributes from 'markdown-it-link-attributes'
+import LinkAttributes from 'markdown-it-link-attributes';
 
 export default defineConfig({
   resolve: {
@@ -38,14 +38,14 @@ export default defineConfig({
       headEnabled: true,
       markdownItSetup(md) {
         // https://prismjs.com/
-        md.use(Prism)
+        md.use(Prism);
         md.use(LinkAttributes, {
           pattern: /^https?:\/\//,
           attrs: {
             target: '_blank',
             rel: 'noopener',
           },
-        })
+        });
       },
     }),
 
@@ -127,4 +127,4 @@ export default defineConfig({
       'vue-demi',
     ],
   },
-})
+});
