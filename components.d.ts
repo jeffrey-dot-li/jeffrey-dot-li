@@ -4,12 +4,11 @@
 declare module 'vue' {
   export interface GlobalComponents {
     Footer: typeof import('./src/components/Footer.vue')['default']
+    ListPosts: typeof import('./src/components/ListPosts.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
+    Post: typeof import('./src/components/Post.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
-    UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
-    RiMoonLine: typeof import('virtual:vite-icons/ri/moon-line')['default']
-    RiSunLine: typeof import('virtual:vite-icons/ri/sun-line')['default']
   }
 }
 

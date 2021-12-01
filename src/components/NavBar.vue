@@ -3,7 +3,7 @@
 <template>
   <header class="header">
     <router-link
-      class="w-10 h-10 absolute lg:fixed m-6 select-none outline-none"
+      class="outline-none h-10 m-6 w-10 absolute select-none lg:fixed"
       to="/"
       focusable="false"
     >
@@ -12,10 +12,11 @@
     <nav class="nav">
       <div class="spacer" />
       <div class="right">
-        <!-- <router-link to="/posts">
+        <router-link to="/thoughts">
           <span class="<md:hidden">Blog</span>
           <ri-article-line class="md:hidden" />
         </router-link>
+        <!--
         <router-link to="/talks" class="<md:hidden">
           Talks
         </router-link>

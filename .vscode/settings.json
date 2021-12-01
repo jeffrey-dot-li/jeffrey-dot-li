@@ -1,7 +1,9 @@
 {
   "cSpell.words": ["Vitesse"],
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": "locales",
+  "i18n-ally.localesPaths": [
+    "locales"
+  ],
   "i18n-ally.sortKeys": true,
   "prettier.enable": false,
   "typescript.tsdk": "node_modules/typescript/lib",
@@ -19,10 +21,11 @@
     "**/.hg": true,
     "**/CVS": true,
     "**/.DS_Store": true,
+    "**/Thumbs.db": true,
     "**/.classpath": true,
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true,
-    "**/node_modules": true
+    "**/node_modules": false
   },
 }
