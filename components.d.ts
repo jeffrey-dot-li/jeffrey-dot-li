@@ -9,6 +9,11 @@ declare module 'vue' {
     Post: typeof import('./src/components/Post.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
+    CarbonHome: typeof import('virtual:vite-icons/carbon/home')['default']
+    RiArticleLine: typeof import('virtual:vite-icons/ri/article-line')['default']
+    UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
+    RiMoonLine: typeof import('virtual:vite-icons/ri/moon-line')['default']
+    RiSunLine: typeof import('virtual:vite-icons/ri/sun-line')['default']
   }
 }
 
