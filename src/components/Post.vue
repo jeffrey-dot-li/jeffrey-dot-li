@@ -67,7 +67,7 @@ onMounted(() => {
       {{ frontmatter.subtitle }}
     </p>
   </div>
-  <article ref="content" class="text-left text-content indent">
+  <article ref="content" class="text-left text-content indent article-content">
     <slot />
   </article>
   <div v-if="route.path !== '/'" class="m-auto mt-8 mb-8 prose ">
@@ -79,3 +79,14 @@ onMounted(() => {
     </router-link>
   </div>
 </template>
+
+<style lang="scss">
+.article-content
+{
+  >* p:nth-child(2)::first-letter {
+    // Second child because the first child is table of contents for some reason.
+    @apply font-bold text-5xl;
+  }
+}
+
+</style>
