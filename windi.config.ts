@@ -2,7 +2,8 @@
 import { defineConfig } from 'vite-plugin-windicss';
 import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography';
-import { FontFamilyReference } from './google-fonts';
+import themeColors, { themeHSL } from './theme/colors';
+import { FontFamilyReference } from './theme/google-fonts';
 
 export default defineConfig({
   darkMode: 'class',
@@ -13,11 +14,7 @@ export default defineConfig({
   theme: {
     extend: {
       fontFamily: FontFamilyReference,
-      colors:
-      {
-        lavender: '#7B66FF',
-        verdant: '#66FF75',
-      },
+      colors: themeColors,
       typography: {
         DEFAULT: {
           css: {
@@ -30,7 +27,7 @@ export default defineConfig({
               'textDecoration': 'none',
               '&:hover': {
                 opacity: 1,
-                color: colors.teal[600],
+                color: themeHSL.sunrise.palette[100],
               },
             },
             b: { color: 'inherit' },

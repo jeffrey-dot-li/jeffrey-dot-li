@@ -14,6 +14,8 @@ declare module 'vue' {
     UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
     RiMoonLine: typeof import('virtual:vite-icons/ri/moon-line')['default']
     RiSunLine: typeof import('virtual:vite-icons/ri/sun-line')['default']
+    FeatherBriefcase: typeof import('virtual:vite-icons/feather/briefcase')['default']
+    FeatherEdit3: typeof import('virtual:vite-icons/feather/edit3')['default']
   }
 }
 

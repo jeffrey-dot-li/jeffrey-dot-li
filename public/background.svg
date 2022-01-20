@@ -2,7 +2,7 @@
 <g clip-path="url(#clip0)" filter="url(#filter0_d)">
 <rect width="1152" height="700" transform="translate(4)" fill="white"/>
 <path d="M1155 -1V697H214.5L1155 -1Z" fill="#13EC7F"/>
-<path d="M1155 -1V697H813.5L1155 -1Z" fill="#34C1EE"/>
+<path d="M1155 -1V697H813.5L1155 -1Z" fill="hsl(182,100%, 50%)"/>
 </g>
 <defs>
 <filter id="filter0_d" x="0" y="0" width="1160" height="708" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">

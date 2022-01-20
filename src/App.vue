@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { useHead } from '@vueuse/head'
+import { useHead } from '@vueuse/head';
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
@@ -13,9 +13,11 @@ useHead({
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:creator', content: '@jeffrey_dot_li' },
   ],
-})
+});
 </script>
 
 <template>
-  <router-view />
+  <div class="flex flex-col min-h-[100vh]">
+    <router-view />
+  </div>
 </template>

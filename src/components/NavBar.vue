@@ -9,13 +9,18 @@
     >
       <img src="/logo.svg" alt="logo">
     </router-link>
-    <nav class="nav">
+    <nav class="text-banner nav">
       <div class="spacer" />
       <div class="right">
-        <router-link to="/thoughts">
-          <span class="<md:hidden">Blog</span>
-          <ri-article-line class="md:hidden" />
+        <router-link to="/portfolio">
+          <span class="<md:hidden">Portfolio</span>
+          <feather-briefcase class="md:hidden" />
         </router-link>
+        <router-link to="/thoughts">
+          <span class="<md:hidden">Musings</span>
+          <feather-edit-3 class="md:hidden" />
+        </router-link>
+
         <!--
         <router-link to="/talks" class="<md:hidden">
           Talks
@@ -42,11 +47,12 @@
         <!-- <a href="/feed.xml" target="_blank" title="RSS" class="<md:hidden">
           <la-rss-square style="font-size:1.25rem; margin: 0 -0.125rem;" />
         </a> -->
-        <toggle-theme />
+        <!-- <toggle-theme /> -->
       </div>
     </nav>
   </header>
 </template>
+
 <style scoped>
 .header h1 {
   margin-bottom: 0;
@@ -57,6 +63,7 @@
   left: 1.5rem;
 }
 .nav {
+  /* @ */
   padding: 2rem;
   width: 100%;
   display: grid;
@@ -70,16 +77,19 @@
   margin-bottom: 0;
 }
 .nav a {
+  @apply text-xl;
   cursor: pointer;
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
+  transition: 0.2s ease;
   opacity: 0.6;
   outline: none;
 }
 .nav a:hover {
   opacity: 1;
   text-decoration-color: inherit;
+  /* @tslint ignore */
+  @apply text-bloom-65;
 }
 .nav .right {
   display: grid;
