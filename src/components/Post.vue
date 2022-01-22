@@ -1,7 +1,7 @@
 <script setup lang='ts'>
 import { useEventListener } from '@vueuse/core';
 import { defineProps, onMounted, ref } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
+import { useRouter } from 'vue-router';
 import { formatDate } from '~/logic';
 defineProps({
   frontmatter: {
@@ -10,7 +10,6 @@ defineProps({
   },
 });
 const router = useRouter();
-const route = useRoute();
 const content = ref<HTMLDivElement>();
 onMounted(() => {
   const navigate = () => {
@@ -57,7 +56,7 @@ onMounted(() => {
 
 <template>
   <div v-if="frontmatter.display ?? frontmatter.title" class="m-auto  mb-8 prose">
-    <h1 class="text-banner mb-0">
+    <h1 class="font-banner mb-0">
       {{ frontmatter.display ?? frontmatter.title }}
     </h1>
     <p v-if="frontmatter.date" class="opacity-50 !-mt-2">
@@ -67,17 +66,9 @@ onMounted(() => {
       {{ frontmatter.subtitle }}
     </p>
   </div>
-  <article ref="content" class="text-left text-content indent article-content">
+  <article ref="content" class="font-content text-left indent article-content">
     <slot />
   </article>
-  <div v-if="route.path !== '/'" class="m-auto mt-8 mb-8 prose ">
-    <router-link
-      :to="route.path.split('/').slice(0, -1).join('/') || '/'"
-      class="font-mono opacity-50 no-underline hover:opacity-75"
-    >
-      cd ..
-    </router-link>
-  </div>
 </template>
 
 <style lang="scss">

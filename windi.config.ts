@@ -1,6 +1,5 @@
 
 import { defineConfig } from 'vite-plugin-windicss';
-import colors from 'windicss/colors';
 import typography from 'windicss/plugin/typography';
 import themeColors, { themeHSL } from './theme/colors';
 import { FontFamilyReference } from './theme/google-fonts';
@@ -27,13 +26,13 @@ export default defineConfig({
               'textDecoration': 'none',
               '&:hover': {
                 opacity: 1,
-                color: themeHSL.sunrise.palette[100],
+                color: themeHSL.bloom.palette[100],
               },
             },
             b: { color: 'inherit' },
             strong: { color: 'inherit' },
             em: { color: 'inherit' },
-            h1: { color: 'inherit' },
+            h1: { 'color': 'inherit', 'font-weight': 'normal' },
             h2: { color: 'inherit' },
             h3: { color: 'inherit' },
             h4: { color: 'inherit' },

@@ -9,7 +9,7 @@
     >
       <img src="/logo.svg" alt="logo">
     </router-link>
-    <nav class="text-banner nav">
+    <nav class="font-banner nav">
       <div class="spacer" />
       <div class="right">
         <router-link to="/portfolio">
@@ -88,7 +88,8 @@
 .nav a:hover {
   opacity: 1;
   text-decoration-color: inherit;
-  /* @tslint ignore */
+  /* windicss ignore */
+  /* bruh */
   @apply text-bloom-65;
 }
 .nav .right {

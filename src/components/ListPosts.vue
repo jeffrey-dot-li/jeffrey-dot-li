@@ -25,15 +25,11 @@ const posts = computed(() =>
       class="font-normal mt-2 mb-6 item block no-underline"
       :to="route.path"
     >
-      <li class="no-underline">
-        <div class="text-xl text-banner title ">
+      <li class="opacity-75 transition-all no-underline hover:opacity-100">
+        <div class="font-banner text-xl  title">
           {{ route.meta.frontmatter.title }}
-          <sup
-            v-if="route.meta.frontmatter.lang === 'zh'"
-            class="border border-current rounded text-xs px-1 pb-0.2"
-          >中文</sup>
         </div>
-        <div class="-mt-1 text-sm opacity-50 time">
+        <div class="-mt-1 text-sm opacity-75 time">
           {{ formatDate(route.meta.frontmatter.date) }} <span v-if="route.meta.frontmatter.duration" class="opacity-50">· {{ route.meta.frontmatter.duration }}</span>
         </div>
       </li>
