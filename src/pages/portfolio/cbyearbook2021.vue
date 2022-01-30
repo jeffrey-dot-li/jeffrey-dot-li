@@ -17,8 +17,7 @@
 </template>
 
 <style lang="scss" scoped>
-
-  .box{
+   .box{
     --manip: 2px;
     border-width:3rem;
     background-color:#eee;

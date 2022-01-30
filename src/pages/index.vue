@@ -13,7 +13,7 @@
   </svg>
   <!-- TODO: Put the background in another file lmao and prob lavalamp it -->
   <div class="text-left p-4 md:p-12 md:w-2/3">
-    <h1 class="font-banner my-6 text-6xl">
+    <h1 class="font-title my-6 text-6xl">
       Hi, I'm Jeffrey Li.
     </h1>
     <p class="text-content ml-6 text-2xl text-gray-600 md:w-[90%] dark:text-gray-300">

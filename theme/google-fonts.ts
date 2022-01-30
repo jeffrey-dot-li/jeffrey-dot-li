@@ -9,6 +9,20 @@ const fallbacks
 
 const googleFonts
 = {
+  'Oswald': {
+    name: 'Oswald',
+    fromGoogle: true,
+    weights: [],
+    roles: [],
+    fallbacks: fallbacks.display,
+  },
+  'Inter': {
+    name: 'Inter',
+    fromGoogle: true,
+    weights: [],
+    roles: [],
+    fallbacks: fallbacks.display,
+  },
   'Krona One': {
     name: 'Krona One',
     fromGoogle: true,
@@ -47,6 +61,7 @@ export const projectFonts
 = {
   content: googleFonts.Quicksand,
   banner: localFonts['Pesta Stencil'],
+  title: googleFonts.Oswald,
 } as const;
 
 const replaceSpaces = (s: string, c = ''): string => s.replace(/\s+/g, c);
