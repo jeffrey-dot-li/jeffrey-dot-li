@@ -1,12 +1,13 @@
 <script setup lang="ts">
-const projects = [{
-  path: '/portfolio/quento',
-  title: 'Quento',
-},
-{
-  path: '/portfolio/cbyearbook2021',
-  title: 'CB Yearbook 2021',
-}];
+const projects = [
+  //   {
+  //   path: '/portfolio/quento',
+  //   title: 'Quento',
+  // },
+  {
+    path: '/portfolio/cbyearbook2021',
+    title: 'CB Yearbook 2021',
+  }];
 </script>
 
 <template>
@@ -24,7 +25,7 @@ const projects = [{
       :to="route.path"
     >
       <li class="opacity-75 transition-all no-underline hover:opacity-100">
-        <div class="text-xl font-banner  title">
+        <div class="text-xl font-banner title">
           {{ route.title }}
         </div>
       </li>

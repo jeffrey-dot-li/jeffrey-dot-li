@@ -35,7 +35,7 @@ export const themeHSL
       100: 'hsl(42,100%, 50%)',
     },
   },
-  bloom: {
+  bloom: { // TODO: Rename Blossom
     hue: 329,
     sat: 85,
     palette:
@@ -46,7 +46,7 @@ export const themeHSL
       100: 'hsl(329,100%, 70%)',
     },
   },
-  iris: {
+  iris: { // TODO: Rename Evenshroud
     hue: 239,
     sat: 85,
     palette:

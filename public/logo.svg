@@ -5,10 +5,10 @@
 <path d="M198 42.8384C193.552 48.3891 188 53.5732 188 61.0606C188 62.9778 188.01 65.0095 190.444 64.6902C194.802 64.1187 197.505 61.8293 199.333 58.1717" stroke="black" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
 </mask>
 <g mask="url(#mask0)">
-<path d="M199.333 0.505035H0.333313V174.505H199.333V0.505035Z" fill="url(#paint0_linear)"/>
+<path d="M200 0H0V175H200V0Z" fill="url(#paint0_linear)"/>
 </g>
 <defs>
-<linearGradient id="paint0_linear" x1="0.333313" y1="0.505035" x2="0.333313" y2="174.505" gradientUnits="userSpaceOnUse">
+<linearGradient id="paint0_linear" x1="0" y1="0" x2="0" y2="175" gradientUnits="userSpaceOnUse">
 <stop stop-color="hsl(182,100%, 50%)"/>
 <stop offset="1" stop-color="hsl(144,100%, 50%)"/>
 </linearGradient>

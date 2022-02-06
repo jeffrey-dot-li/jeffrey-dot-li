@@ -9,11 +9,11 @@ const props = defineProps<{
 
 const router = useRouter();
 const routes = router.getRoutes()
-  .filter(i => i.path.startsWith('/thoughts') && i.meta.frontmatter && i.meta.frontmatter.date)
+  .filter(i => i.path.startsWith('/writing') && i.meta.frontmatter && i.meta.frontmatter.date)
   .sort((a, b) => +new Date(b.meta.frontmatter.date) - +new Date(a.meta.frontmatter.date));
 
 const posts = computed(() =>
-  routes.filter(i => !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type),
+  routes.filter(i => !i.path.endsWith('.html') && i.meta.frontmatter.type === props.type && !i.meta.frontmatter.hidden),
 );
 </script>
 

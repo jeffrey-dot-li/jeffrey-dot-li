@@ -3,6 +3,7 @@ title: It Is What It Is Till It Ain't
 date: 2021-12-21T16:00
 lang: en
 duration: 5min
+format: verse
 ---
 
 [[toc]]

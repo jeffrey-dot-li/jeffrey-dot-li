@@ -16,8 +16,8 @@
           <span class="<md:hidden">Portfolio</span>
           <feather-briefcase class="md:hidden" />
         </router-link>
-        <router-link to="/thoughts">
-          <span class="<md:hidden">Musings</span>
+        <router-link to="/writing">
+          <span class="<md:hidden">Writing</span>
           <feather-edit-3 class="md:hidden" />
         </router-link>
 

@@ -55,29 +55,39 @@ onMounted(() => {
 </script>
 
 <template>
-  <div v-if="frontmatter.display ?? frontmatter.title" class="m-auto  mb-8 prose">
+  <div v-if="frontmatter.display ?? frontmatter.title" class="m-auto mb-8 prose">
     <h1 class="font-banner mb-0">
       {{ frontmatter.display ?? frontmatter.title }}
     </h1>
     <p v-if="frontmatter.date" class="opacity-50 !-mt-2">
-      {{ formatDate(frontmatter.date) }} <span v-if="frontmatter.duration">· {{ frontmatter.duration }}</span>
+      {{ formatDate(frontmatter.date) }}
+      <span
+        v-if="frontmatter.duration"
+      >· {{ frontmatter.duration }}</span>
     </p>
     <p v-if="frontmatter.subtitle" class="opacity-50 italic !-mt-6">
       {{ frontmatter.subtitle }}
     </p>
   </div>
-  <article ref="content" class="font-content text-left indent article-content">
+
+  <article ref="content" class="font-content text-left indent article-content" :class="frontmatter.format">
     <slot />
   </article>
 </template>
 
 <style lang="scss">
-.article-content
-{
-  >* p:nth-child(2)::first-letter {
+.article-content {
+  > * p:nth-child(2)::first-letter {
     // Second child because the first child is table of contents for some reason.
-    @apply font-bold text-5xl;
+    @apply font-bold;
+    font-size: 5rem;
+    line-height: 1;
   }
 }
-
+.verse
+{
+  div {
+    @apply prose-verse;
+  }
+}
 </style>

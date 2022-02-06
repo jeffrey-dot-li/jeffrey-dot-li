@@ -15,6 +15,13 @@ export default defineConfig({
       fontFamily: FontFamilyReference,
       colors: themeColors,
       typography: {
+        verse:
+        {
+          css:
+          {
+            width: 'max-content',
+          },
+        },
         DEFAULT: {
           css: {
             maxWidth: '65ch',
