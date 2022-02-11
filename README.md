@@ -4,4 +4,4 @@
 - [jeffreydotli.me](https://jeffreydotli.me) is my personal website. If you'd like to see for my [portfolio](https://jeffreydotli.me/portfolio), my [writing](https://jeffreydotli.me/writing), or just a touch of color, feel free to take a look around 👍
 
 
-[![Jeffrey's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeffrey-dot-li&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+[![Jeffrey's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeffrey-dot-li&theme=solarized-light)](https://github.com/anuraghazra/github-readme-stats)
