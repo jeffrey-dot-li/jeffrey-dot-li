@@ -73,6 +73,12 @@ onMounted(() => {
   <article ref="content" class="font-content text-left indent article-content" :class="frontmatter.format">
     <slot />
   </article>
+  <span v-if="frontmatter.inProgress" class="mt-8 text-gray-400 italic">
+    Work in progress ·
+    <span v-if="frontmatter.updated" class="!-mt-2">
+      Last updated {{ formatDate(frontmatter.updated) }}
+    </span>
+  </span>
 </template>
 
 <style lang="scss">

@@ -1,10 +1,12 @@
 ---
-title: The Garden 
+title: Where We Once Were 
 date: 2022-02-06T16:00
 lang: en
 duration: 5min
-hidden: true
 format: verse
+# hidden: false
+inProgress: true
+updated: 2022-02-10T16:00
 ---
 
 [[toc]]
@@ -30,4 +32,5 @@ And this life is just a test <br>
 Why then do I still remember <br>
 These dreams I can't forget <br>
 See the same scenes before me<br>
-As I did the day I left
+As I did the day I left <br>
+
