@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import externalDeps from '~/hrefs';
+
 </script>
 <template>
   <header class="header">
@@ -12,6 +14,11 @@
     <nav class="font-banner nav">
       <div class="spacer" />
       <div class="right">
+        <a :href="externalDeps.resume.href" target="_blank">
+          <span class="<md:hidden">Resume</span>
+          <span class="md:hidden">CV</span>
+        </a>
+
         <router-link to="/portfolio">
           <span class="<md:hidden">Portfolio</span>
           <feather-briefcase class="md:hidden" />
