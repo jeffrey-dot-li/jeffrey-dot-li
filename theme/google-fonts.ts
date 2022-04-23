@@ -7,8 +7,22 @@ const fallbacks
   mono: ['Courier New', 'Courier', 'monospace'],
 } as const;
 
-const googleFonts
+export const googleFonts
 = {
+  'Open Sans': {
+    name: 'Open Sans',
+    fromGoogle: true,
+    weights: [200, 300, 400, 500, 600, 700],
+    roles: [],
+    fallbacks: fallbacks.sans,
+  },
+  'Roboto': {
+    name: 'Roboto',
+    fromGoogle: true,
+    weights: [],
+    roles: [],
+    fallbacks: fallbacks.sans,
+  },
   'Oswald': {
     name: 'Oswald',
     fromGoogle: true,
@@ -46,7 +60,7 @@ const googleFonts
   },
 } as const;
 
-const localFonts
+export const localFonts
 = {
   'Pesta Stencil': {
     name: 'Pesta Stencil',
@@ -55,22 +69,4 @@ const localFonts
     roles: ['display', 'banner', 'round'],
     fallbacks: fallbacks.display,
   },
-};
-
-export const projectFonts
-= {
-  content: googleFonts.Quicksand,
-  banner: localFonts['Pesta Stencil'],
-  title: googleFonts.Oswald,
 } as const;
-
-const replaceSpaces = (s: string, c = ''): string => s.replace(/\s+/g, c);
-
-const googleFontsLink = `${Object.values(projectFonts).filter(v => v.fromGoogle).reduce(
-  (prev, current) => `${prev}family=${replaceSpaces(current.name, '+')}&`,
-  'https://fonts.googleapis.com/css2?',
-)}display=swap`;
-
-export default googleFontsLink;
-
-export const FontFamilyReference = Object.fromEntries(Object.entries(projectFonts).map(([k, v]) => [k, [v.name, ...v.fallbacks]]));

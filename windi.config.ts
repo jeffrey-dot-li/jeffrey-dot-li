@@ -1,8 +1,8 @@
 
 import { defineConfig } from 'vite-plugin-windicss';
 import typography from 'windicss/plugin/typography';
-import themeColors, { themeHSL } from './theme/colors';
-import { FontFamilyReference } from './theme/google-fonts';
+import { themeHSL } from './theme/colors';
+import { fontFamily, colors } from './theme/theme';
 
 export default defineConfig({
   darkMode: 'class',
@@ -12,8 +12,8 @@ export default defineConfig({
   attributify: true,
   theme: {
     extend: {
-      fontFamily: FontFamilyReference,
-      colors: themeColors,
+      fontFamily,
+      colors,
       typography: {
         verse:
         {

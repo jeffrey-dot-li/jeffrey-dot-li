@@ -1,4 +1,3 @@
-
 export const themeHSL
 = {
   evergreen: {
@@ -46,7 +45,7 @@ export const themeHSL
       100: 'hsl(329,100%, 70%)',
     },
   },
-  iris: { // TODO: Rename Evenshroud
+  iris: { // TODO: Rename Twilight
     hue: 239,
     sat: 85,
     palette:
@@ -59,5 +58,6 @@ export const themeHSL
   },
 } as const;
 
-const themeRGB = Object.fromEntries(Object.entries(themeHSL).map(([k, v]) => [k, v.palette]));
-export default themeRGB;
+// eslint-disable-next-line no-use-before-define
+const themeCondensed = Object.fromEntries(Object.entries(themeHSL).map(([k, v]) => [k, v.palette])) as { [k in keyof typeof themeHSL]: (typeof themeHSL)[k]['palette'] };
+export default themeCondensed;

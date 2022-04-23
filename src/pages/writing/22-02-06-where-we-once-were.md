@@ -27,10 +27,23 @@ Can never answer the question <br>
 What God even has for you in plan. <br>
 Whether there ever was a lesson <br>
 You had missed in all this mess <br>
-For if this all was truly destined <br>
-And this life is just a test <br>
-Why then do I still remember <br>
-These dreams I can't forget <br>
-See the same scenes before me<br>
-As I did the day I left <br>
+Amidst the chaos and the stress <br>
+Had I failed to see the Lord testing me? <br>
 
+'Cause all them times I've prayed and tried <br>
+The emptyness still stayed inside of me <br>
+Unmoving, the only thing that never leaves <br>
+Like from those autumn trees, falling falling <br>
+Give way to winter winds I hear it calling out for me <br>
+
+And in the deafening storm, I heard my name <br>
+In the darkest nights, the vision came <br>
+
+Of home and hearth upon this earth <br>
+See the warmth and light glowing faintly there on the horizon <br>
+
+But still I wonder, that light <br>
+Why was this vision sent to me if it wasn't meant to be <br>
+Because even as I gently gently row my boat down Noah's stream <br>
+
+But the destination always feels so far off in the distance <br>

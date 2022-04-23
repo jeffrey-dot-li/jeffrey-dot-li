@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useHead } from '@vueuse/head';
-import googleFontsLink from '../theme/google-fonts';
+import { googleFontsLink } from '../theme/theme';
 
 // https://github.com/vueuse/head
 // you can use this to manipulate the document head in any components,
@@ -15,11 +15,11 @@ useHead({
     { name: 'twitter:creator', content: '@jeffrey_dot_li' },
   ],
   link:
-  [
-    { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-    { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
-    { rel: 'stylesheet', href: googleFontsLink },
-  ],
+    [
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: true },
+      { rel: 'stylesheet', href: googleFontsLink },
+    ],
 });
 </script>
 
