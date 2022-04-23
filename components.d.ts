@@ -15,6 +15,7 @@ declare module 'vue' {
     FeatherBriefcase: typeof import('virtual:vite-icons/feather/briefcase')['default']
     FeatherEdit3: typeof import('virtual:vite-icons/feather/edit3')['default']
     UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
+    FeatherLinkedin: typeof import('virtual:vite-icons/feather/linkedin')['default']
   }
 }
 

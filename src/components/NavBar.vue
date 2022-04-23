@@ -4,11 +4,7 @@ import externalDeps from '~/hrefs';
 </script>
 <template>
   <header class="header">
-    <router-link
-      class="outline-none h-10 m-6 w-10 absolute select-none lg:fixed"
-      to="/"
-      focusable="false"
-    >
+    <router-link class="outline-none h-10 m-6 w-10 absolute select-none lg:fixed" to="/" focusable="false">
       <img src="/logo.svg" alt="logo">
     </router-link>
     <nav class="font-banner nav">
@@ -42,13 +38,13 @@ import externalDeps from '~/hrefs';
         <router-link to="/notes" title="Notes">
           <ri-sticky-note-line />
         </router-link> -->
-        <!-- <a href="https://twitter.com/antfu7" target="_blank" title="Twitter">
-          <feather-twitter />
-        </a>
-        <a href="https://twitter.com/antfu7" target="_blank" title="Twitter">
-          <feather-twitter />
+        <!-- <a :href="externalDeps.instagram.href" target="_blank" title="Instagram">
+          <feather-instagram />
         </a> -->
-        <a href="https://github.com/jeffrey-dot-li" target="_blank" title="GitHub">
+        <a :href="externalDeps.linkedin.href" target="_blank" title="Linkedin">
+          <feather-linkedin />
+        </a>
+        <a :href="externalDeps.github.href" target="_blank" title="GitHub">
           <uil-github-alt />
         </a>
         <!-- <a href="/feed.xml" target="_blank" title="RSS" class="<md:hidden">
@@ -64,11 +60,13 @@ import externalDeps from '~/hrefs';
 .header h1 {
   margin-bottom: 0;
 }
+
 .logo {
   position: absolute;
   top: 1.5rem;
   left: 1.5rem;
 }
+
 .nav {
   /* @ */
   padding: 2rem;
@@ -77,12 +75,15 @@ import externalDeps from '~/hrefs';
   grid-template-columns: auto max-content;
   box-sizing: border-box;
 }
-.nav > * {
+
+.nav>* {
   margin: auto;
 }
+
 .nav img {
   margin-bottom: 0;
 }
+
 .nav a {
   @apply text-xl;
   cursor: pointer;
@@ -92,6 +93,7 @@ import externalDeps from '~/hrefs';
   opacity: 0.6;
   outline: none;
 }
+
 .nav a:hover {
   opacity: 1;
   text-decoration-color: inherit;
@@ -99,12 +101,14 @@ import externalDeps from '~/hrefs';
   /* bruh */
   @apply text-bloom-65;
 }
+
 .nav .right {
   display: grid;
   grid-gap: 1.2rem;
   grid-auto-flow: column;
 }
-.nav .right > * {
+
+.nav .right>* {
   margin: auto;
 }
 </style>
