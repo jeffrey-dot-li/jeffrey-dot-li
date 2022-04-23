@@ -4,7 +4,7 @@
 
 [build]
   publish = "dist"
-  command = "git submodule foreach git pull origin master  && npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
+  command = "git submodule init && git submodule update && npx pnpm i --store=node_modules/.pnpm-store && npx pnpm run build"
 
 [[redirects]]
   from = "/*"

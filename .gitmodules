@@ -1,8 +1,7 @@
-[submodule "theme"]
-	path = theme
-	url = https://github.com/jeffrey-dot-li/theme
-
 [submodule "public/fonts"]
 	path = public/fonts
 	url = https://github.com/jeffrey-dot-li/fonts
 
+[submodule "theme"]
+	path = theme
+	url = https://github.com/jeffrey-dot-li/theme.git
