@@ -1,13 +1,13 @@
 {
   "recommendations": [
     "antfu.vite",
-    "johnsoncodehk.volar",
     "lokalise.i18n-ally",
     "antfu.iconify",
     "dbaeumer.vscode-eslint",
     "voorjaar.windicss-intellisense",
     "csstools.postcss",
     "bradlc.vscode-tailwindcss",
-    "zignd.html-css-class-completion"
+    "zignd.html-css-class-completion",
+    "Vue.volar"
   ]
 }

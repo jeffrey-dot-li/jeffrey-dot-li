@@ -8,14 +8,15 @@ declare module 'vue' {
     Footer: typeof import('./src/components/Footer.vue')['default']
     ListPosts: typeof import('./src/components/ListPosts.vue')['default']
     NavBar: typeof import('./src/components/NavBar.vue')['default']
+    Polariod: typeof import('./src/components/Polariod.vue')['default']
     Post: typeof import('./src/components/Post.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
     CarbonHome: typeof import('virtual:vite-icons/carbon/home')['default']
     FeatherBriefcase: typeof import('virtual:vite-icons/feather/briefcase')['default']
     FeatherEdit3: typeof import('virtual:vite-icons/feather/edit3')['default']
-    UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
     FeatherLinkedin: typeof import('virtual:vite-icons/feather/linkedin')['default']
+    UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
   }
 }
 

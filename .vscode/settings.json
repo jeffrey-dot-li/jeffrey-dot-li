@@ -26,6 +26,7 @@
     "**/.project": true,
     "**/.settings": true,
     "**/.factorypath": true,
-    "**/node_modules": false
+    "**/*.olean": true,
+    "**/node_modules": true
   },
 }

@@ -1,4 +1,25 @@
 <script setup lang="ts">
+const photos = [
+  {
+    src : 'https://m.media-amazon.com/images/I/61+6ga32DbL._SL1425_.jpg',
+    alt : 'Swimming by Mac Miller'
+  },
+  {
+    src : 'photos/birthday.jpg',
+    alt: 'Birthday with friends'
+  },
+  {
+    src : 'photos/western.jpg',
+    alt : 'Me at western',
+  },
+  {
+    src : 'photos/robotics.jpg',
+    alt: 'Robotics Team'
+  }
+] as const;
+
+const shuffled = [...photos].sort(() => 0.5 - Math.random());
+
 </script>
 
 <template>
@@ -26,5 +47,11 @@
       <carbon-home class="transition-all inline hover:text-bloom-100"></carbon-home>
     </span>
   </div>
+  <div class="flex flex-col justify-around items-center md:flex-row">
+    <polariod :photo-url="shuffled[0].src" :alt="shuffled[0].alt" dynamic></polariod>
+    <polariod :photo-url="shuffled[1].src" :alt="shuffled[1].alt" dynamic></polariod>
+    <polariod :photo-url="shuffled[2].src" :alt="shuffled[2].alt" dynamic></polariod>
+  </div>
+
   <flicker></flicker>
 </template>
