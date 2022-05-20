@@ -26,10 +26,15 @@ const props = defineProps({
     default: false,
     type: Boolean,
   },
-  alt: 
+  alt:
   {
     type: String,
-    required: false
+    required: false,
+  },
+  caption:
+  {
+    type: String,
+    required: false,
   },
   active:
   {
@@ -46,11 +51,11 @@ const props = defineProps({
     default: '300px',
     type: String,
   },
-  date : 
+  date:
   {
     // TODO: Implement date.
-    type : Date,
-    required : false,
+    type: Date,
+    required: false,
   },
   lazy:
   {
@@ -86,7 +91,7 @@ onBeforeMount(generateOffsets);
 
 const transformStyle = computed (() => {
   if (isStatic) return 'filter : none;';
-  return `transform: rotate(${angleOffset.value}deg) translate3d(${offset.x}px, ${offset.y}px, ${offset.z}px);`;
+  return `--transform: rotate(${angleOffset.value}deg) translate3d(${offset.x}px, ${offset.y}px, ${offset.z}px);`;
 });
 
 </script>
@@ -97,10 +102,22 @@ $smallBoxShadow: 0 10px 16px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.
 $bigBoxShadow: 0 20px 32px 0 rgba(0, 0, 0, 0.4), 0 12px 40px 0 rgba(0, 0, 0, 0.1);
 
 .polaroid {
+  --transform: translate3d(0, 0, 0);
   --maxImgSize: 250px;
   display: block;
   width: max-content;
   cursor: pointer;
+  transform : var(--transform);
+
+  &.modal
+  {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) var(--transform);
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 100;
+  }
 
   .polaroid-names {
     max-width: 100%;

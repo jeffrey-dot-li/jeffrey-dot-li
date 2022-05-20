@@ -123,8 +123,8 @@ export default defineConfig({
       registerType: 'autoUpdate',
       includeAssets: ['favicon.svg', 'robots.txt', 'safari-pinned-tab.svg', 'fonts/*.ttf', 'fonts/*.otf'],
       manifest: {
-        name: 'Vitesse',
-        short_name: 'Vitesse',
+        name: 'Jeffrey Li',
+        short_name: 'Jeffrey Li',
         theme_color: '#ffffff',
         icons: [
           {

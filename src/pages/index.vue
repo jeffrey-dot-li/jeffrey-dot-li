@@ -1,21 +1,25 @@
 <script setup lang="ts">
 const photos = [
   {
-    src : 'https://m.media-amazon.com/images/I/61+6ga32DbL._SL1425_.jpg',
-    alt : 'Swimming by Mac Miller'
+    src: 'https://m.media-amazon.com/images/I/61+6ga32DbL._SL1425_.jpg',
+    alt: 'Swimming by Mac Miller',
+    caption: 'Favorite Tracks: \'2009\', \'Small Worlds\', \'Jet Fuel\'',
   },
   {
-    src : 'photos/birthday.jpg',
-    alt: 'Birthday with friends'
+    src: 'photos/birthday.jpg',
+    alt: 'Birthday with friends',
+    caption: '19th Birthday @ Major\'s Hill Park',
   },
   {
-    src : 'photos/western.jpg',
-    alt : 'Me at western',
+    src: 'photos/western.jpg',
+    alt: 'Me at western',
+    caption: 'Just a random picture @ Western\'s Astronomy Building',
   },
   {
-    src : 'photos/robotics.jpg',
-    alt: 'Robotics Team'
-  }
+    src: 'photos/robotics.jpg',
+    alt: 'Robotics Team',
+    caption: '2381 Robotics @ Ontario Provs 2020',
+  },
 ] as const;
 
 const shuffled = [...photos].sort(() => 0.5 - Math.random());
