@@ -12,11 +12,12 @@ declare module 'vue' {
     Post: typeof import('./src/components/Post.vue')['default']
     README: typeof import('./src/components/README.md')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
+    WooshEffect: typeof import('./src/components/effects/WooshEffect.vue')['default']
+    CarbonHome: typeof import('virtual:vite-icons/carbon/home')['default']
     FeatherBriefcase: typeof import('virtual:vite-icons/feather/briefcase')['default']
     FeatherEdit3: typeof import('virtual:vite-icons/feather/edit3')['default']
     FeatherLinkedin: typeof import('virtual:vite-icons/feather/linkedin')['default']
     UilGithubAlt: typeof import('virtual:vite-icons/uil/github-alt')['default']
-    CarbonHome: typeof import('virtual:vite-icons/carbon/home')['default']
   }
 }
 
