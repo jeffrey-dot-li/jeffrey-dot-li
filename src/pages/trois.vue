@@ -21,14 +21,14 @@
       </Points> -->
     </Scene>
     <!-- <Scene></Scene> -->
-    <!-- <EffectComposer> -->
-    <!-- <RenderPass /> -->
-    <!-- <WaterPass></WaterPass> -->
+    <EffectComposer>
+      <RenderPass />
+      <WaterPass></WaterPass>
     <!-- <SMAAPass></SMAAPass> -->
-    <WooshEffect></WooshEffect>
+    <!-- <WooshEffect></WooshEffect> -->
     <!-- <UnrealBloomPass :strength="2" :radius="0" :threshold="0" /> -->
     <!-- <ZoomBlurPass :strength="zoomStrength" /> -->
-    <!-- </EffectComposer> -->
+    </EffectComposer>
   </Renderer>
 </template>
 <route lang="yaml">
@@ -37,8 +37,9 @@ meta:
 </route>
 <script setup lang="ts">
 import {} from 'postprocessing';
-import { Box, lerp, Camera, PointLight, Renderer, Scene, EffectComposer, RenderPass, UnrealBloomPass, ZoomBlurPass, SMAAPass, Points, BufferGeometry, ShaderMaterial, Texture, EffectPass, ComposerInjectionKey } from 'troisjs';
+import { Box, lerp, Camera, PointLight, Renderer, Scene, UnrealBloomPass, ZoomBlurPass, SMAAPass, Points, BufferGeometry, ShaderMaterial, Texture, ComposerInjectionKey } from 'troisjs';
 import { MathUtils, Clock, Color, Vector3 } from 'three';
+import {EffectComposer, EffectPass, RenderPass} from '~/postprocessing'
 import WaterPass from '~/components/effects/WaterPass';
 // import {} from "postprocessing";
 // const ree = inject(ComposerInjectionKey);
