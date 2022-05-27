@@ -22,9 +22,9 @@ export default class TouchTexture {
   speed: number;
   trail: Point[];
   last: null | {x: number; y: number};
-  canvas: HTMLCanvasElement;
+  canvas!: HTMLCanvasElement;
   ctx: any;
-  texture: Texture;
+  texture!: Texture;
   constructor() {
     this.size = 64 * 2 * 2 * 2 * 2;
     this.width = window.innerWidth;
@@ -40,29 +40,28 @@ export default class TouchTexture {
 
     this.trail = [];
     this.last = null;
-    this.canvas = document.createElement('canvas');
-    this.texture = new Texture(this.canvas);
 
     this.initTexture();
+
   }
 
   initTexture() {
+
+    this.canvas = document.createElement("canvas");
     this.canvas.width = this.width;
     this.canvas.height = this.height;
-    this.ctx = this.canvas.getContext('2d');
-    this.ctx.fillStyle = 'black';
+    this.ctx = this.canvas.getContext("2d");
+    this.ctx.fillStyle = "black";
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
 
     this.texture = new Texture(this.canvas);
-    this.canvas.id = 'touchTexture';
-    // this.canvas.style.width = this.canvas.style.height = `${
-    //   this.canvas.width
-    // }px`;
+    this.canvas.id = "touchTexture";
   }
 
   update(delta: number) {
     this.clear();
     const speed = this.speed;
+    // console.log({trail : this.trail});
     this.trail.forEach((point, i) => {
       const f = point.force * speed * (1 - point.age / this.maxAge);
 
@@ -78,10 +77,6 @@ export default class TouchTexture {
     // });
     this.drawPoints();
 
-    // this.ctx.fillStyle = "rgba(255,0,0,0.5)";
-    // this.ctx.fillRect(0, 0, 200, 200);
-    // this.ctx.fillStyle = "rgba(0,255,0,0.5)";
-    // this.ctx.fillRect(50, 0, 200, 200);
     // this.test();
     this.texture.needsUpdate = true;
   }
@@ -91,7 +86,7 @@ export default class TouchTexture {
     this.ctx.fillRect(0, 0, this.canvas.width, this.canvas.height);
   }
 
-  addTouch(point: Point) {
+  addTouch(point: {x : number, y : number}) {
     let force = 0;
     let vx = 0;
     let vy = 0;

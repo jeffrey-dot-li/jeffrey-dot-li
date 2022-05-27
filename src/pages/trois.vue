@@ -1,11 +1,11 @@
 <template>
-  <Renderer ref="renderer" pointer resize="window">
+  <Renderer ref="renderer" resize="window" pointer >
     <Camera :position="{ z: 0 }" :fov="50" />
-    <Scene>
+    <Scene >
       <!-- <div class="bg-blue-200 h-1/2 w-full top-0 absolute"></div>
       <div class="bg-blue-800 h-1/2 w-full bottom-0 absolute"></div> -->
 
-      <div class="flex flex-col font-display h-full font-800 text-center w-full absolute items-center ">
+      <div class="flex flex-col font-display h-full font-800 text-center w-full absolute items-center " @mousemove.prevent="mousemove">
         <h1 class="my-80px text-white text-8xl leading-[1.1] w-4/5">
           OKAY YOU GOTTA<br> JUMP IN TO
         </h1>
@@ -23,7 +23,8 @@
     <!-- <Scene></Scene> -->
     <EffectComposer>
       <RenderPass />
-      <WaterPass></WaterPass>
+      <RipplePass ref="Ripple"></RipplePass>
+      <!-- <WaterPass></WaterPass> -->
     <!-- <SMAAPass></SMAAPass> -->
     <!-- <WooshEffect></WooshEffect> -->
     <!-- <UnrealBloomPass :strength="2" :radius="0" :threshold="0" /> -->
@@ -41,6 +42,14 @@ import { Box, lerp, Camera, PointLight, Renderer, Scene, UnrealBloomPass, ZoomBl
 import { MathUtils, Clock, Color, Vector3 } from 'three';
 import {EffectComposer, EffectPass, RenderPass} from '~/postprocessing'
 import WaterPass from '~/components/effects/WaterPass';
+import RipplePass from '~/components/effects/RipplePass';
+import { useMousePressed } from '@vueuse/core';
+
+const Ripple = ref<InstanceType<typeof RipplePass>>()
+const mousemove = (ev : MouseEvent) => 
+{
+  Ripple?.value?.mouseMove(ev)
+}
 // import {} from "postprocessing";
 // const ree = inject(ComposerInjectionKey);
 
@@ -61,50 +70,50 @@ import WaterPass from '~/components/effects/WaterPass';
 //   }
 // `;
 
-// const fragmentShader = `
-// #define PI 3.14159265359
-// #define MAX_ITER 10 // water depth
-
-// uniform sampler2D uTexture;
-// varying vec4 vColor;
-// uniform float uTime;
-
-// void main() {
-
-// vec2 sp = gl_PointCoord;
-//  vec2 p = sp * 15.0 - vec2(20.0);
-// vec2 i = p;
-// //float c = 0.0; // brightness; larger -> darker
-// float c = 1.0; // brightness; larger -> darker
-// float inten = 0.025; // brightness; larger -> brighter
-// float speed = 1.5; // larger -> slower
-// float speed2 = 3.0; // larger -> slower
-// float freq = 0.8; // ripples
-// float xflow = 1.5; // flow speed in x direction
-// float yflow = 0.0; // flow speed in y direction
-
-// for (int n = 0; n < MAX_ITER; n++) {
-// float t = uTime * (1.0 - (3.0 / (float(n) + speed)));
-// i = p + vec2(cos(t - i.x * freq) + sin(t + i.y * freq) + (uTime * xflow), sin(t - i.y * freq) + cos(t + i.x * freq) + (uTime * yflow));
-// c += 1.0 / length(vec2(p.x / (sin(i.x + t * speed2) / inten), p.y / (cos(i.y + t * speed2) / inten)));
-// }
-
-// c /= float(MAX_ITER);
-// c = 1.5 - sqrt(c);
-// gl_FragColor = vec4(vec3(c * c * c * c), 0.0) + vec4(0.0, 0.4, 0.55, 1.0);
-// }
-// `;
-
 // // const fragmentShader = `
-// //   uniform sampler2D uTexture;
-// //   varying vec4 vColor;
-// //   void main() {
-// //     gl_FragColor = vColor * texture2D(uTexture, gl_PointCoord);
-// //   }
+// // #define PI 3.14159265359
+// // #define MAX_ITER 10 // water depth
+
+// // uniform sampler2D uTexture;
+// // varying vec4 vColor;
+// // uniform float uTime;
+
+// // void main() {
+
+// // vec2 sp = gl_PointCoord;
+// //  vec2 p = sp * 15.0 - vec2(20.0);
+// // vec2 i = p;
+// // //float c = 0.0; // brightness; larger -> darker
+// // float c = 1.0; // brightness; larger -> darker
+// // float inten = 0.025; // brightness; larger -> brighter
+// // float speed = 1.5; // larger -> slower
+// // float speed2 = 3.0; // larger -> slower
+// // float freq = 0.8; // ripples
+// // float xflow = 1.5; // flow speed in x direction
+// // float yflow = 0.0; // flow speed in y direction
+
+// // for (int n = 0; n < MAX_ITER; n++) {
+// // float t = uTime * (1.0 - (3.0 / (float(n) + speed)));
+// // i = p + vec2(cos(t - i.x * freq) + sin(t + i.y * freq) + (uTime * xflow), sin(t - i.y * freq) + cos(t + i.x * freq) + (uTime * yflow));
+// // c += 1.0 / length(vec2(p.x / (sin(i.x + t * speed2) / inten), p.y / (cos(i.y + t * speed2) / inten)));
+// // }
+
+// // c /= float(MAX_ITER);
+// // c = 1.5 - sqrt(c);
+// // gl_FragColor = vec4(vec3(c * c * c * c), 0.0) + vec4(0.0, 0.4, 0.55, 1.0);
+// // }
 // // `;
+
+// const fragmentShader = `
+//   uniform sampler2D uTexture;
+//   varying vec4 vColor;
+//   void main() {
+//     gl_FragColor = vColor * texture2D(uTexture, gl_PointCoord);
+//   }
+// `;
 // const { randFloat: rnd, randFloatSpread: rndFS } = MathUtils;
 
-// const POINTS_COUNT = 50;
+// const POINTS_COUNT = 50000;
 
 // const positions = reactive(new Float32Array(POINTS_COUNT * 3));
 // const colors = new Float32Array(POINTS_COUNT * 3);

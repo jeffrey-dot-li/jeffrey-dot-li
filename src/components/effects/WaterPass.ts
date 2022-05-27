@@ -7,6 +7,7 @@ export default defineComponent({
     if (!this.renderer) return;
     const waterEffect = new WaterEffect();
     const pass = new Effect(this.renderer!.camera!, waterEffect);
+    pass.renderToScreen=false;
     this.initEffectPass(pass);
   },
   __hmrId: 'WaterPass',
