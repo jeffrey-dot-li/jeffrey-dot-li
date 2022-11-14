@@ -4,7 +4,7 @@ const externalDeps
 = {
   resume:
     {
-      href: 'https://drive.google.com/file/d/1sRWCUq1E41osMeRo9lHx_2rq_EgFHyQC/view?usp=sharing',
+      href: 'https://drive.google.com/file/d/1CaM_UrTMzaJCXluIwFuDz2y8bd4KRcEa/view?usp=share_link',
     },
   github:
   {
