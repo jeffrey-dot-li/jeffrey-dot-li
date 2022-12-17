@@ -6,3 +6,6 @@
 
 [![Jeffrey's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeffrey-dot-li&theme=solarized-light)](https://github.com/anuraghazra/github-readme-stats)
 <!-- TODO: Customize Stats Color theme prob skylight + blossom? -->
+
+<!-- TODO: Fix package json back to   "build": "cross-env NODE_ENV=production vite-ssg build",
+Right now SSG is disabled because of this error https://github.com/vuejs/vitepress/issues/1335 in Trois.js repo. Fix later  -->

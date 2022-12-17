@@ -1,14 +1,15 @@
 {
   "private": true,
-  "name": "pragma-one",
+  "name": "jeffrey-dot-li",
   "author": {
     "email": "jeffrey.dot.li@gmail.com",
     "name": "Jeffrey Li",
-    "url": "jeffreydotli.me"
+    "url": "https://jeffreydotli.me"
   },
   "scripts": {
     "dev": "vite --port 3333 --open",
-    "build": "cross-env NODE_ENV=production vite-ssg build",
+
+    "build": "cross-env NODE_ENV=production vite build",
     "preview": "vite preview",
     "preview-https": "serve dist",
     "prepare": "husky install",
