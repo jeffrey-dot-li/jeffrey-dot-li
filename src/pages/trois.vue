@@ -1,7 +1,7 @@
 <template>
-  <Renderer ref="renderer" resize="window" pointer >
+  <Renderer ref="renderer" resize="window" pointer>
     <Camera :position="{ z: 0 }" :fov="50" />
-    <Scene >
+    <Scene>
       <!-- <div class="bg-blue-200 h-1/2 w-full top-0 absolute"></div>
       <div class="bg-blue-800 h-1/2 w-full bottom-0 absolute"></div> -->
 
@@ -40,16 +40,15 @@ meta:
 import {} from 'postprocessing';
 import { Box, lerp, Camera, PointLight, Renderer, Scene, UnrealBloomPass, ZoomBlurPass, SMAAPass, Points, BufferGeometry, ShaderMaterial, Texture, ComposerInjectionKey } from 'troisjs';
 import { MathUtils, Clock, Color, Vector3 } from 'three';
-import {EffectComposer, EffectPass, RenderPass} from '~/postprocessing'
+import { useMousePressed } from '@vueuse/core';
+import { EffectComposer, EffectPass, RenderPass } from '~/postprocessing';
 import WaterPass from '~/components/effects/WaterPass';
 import RipplePass from '~/components/effects/RipplePass';
-import { useMousePressed } from '@vueuse/core';
 
-const Ripple = ref<InstanceType<typeof RipplePass>>()
-const mousemove = (ev : MouseEvent) => 
-{
-  Ripple?.value?.mouseMove(ev)
-}
+const Ripple = ref<InstanceType<typeof RipplePass>>();
+const mousemove = (ev: MouseEvent) => {
+  Ripple?.value?.mouseMove(ev);
+};
 // import {} from "postprocessing";
 // const ree = inject(ComposerInjectionKey);
 

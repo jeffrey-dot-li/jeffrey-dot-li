@@ -13,7 +13,6 @@ declare module 'vue' {
     README: typeof import('./src/components/README.md')['default']
     ToggleTheme: typeof import('./src/components/ToggleTheme.vue')['default']
     WooshEffect: typeof import('./src/components/effects/WooshEffect.vue')['default']
-    CarbonWarning: typeof import('virtual:vite-icons/carbon/warning')['default']
     CarbonHome: typeof import('virtual:vite-icons/carbon/home')['default']
     FeatherBriefcase: typeof import('virtual:vite-icons/feather/briefcase')['default']
     FeatherEdit3: typeof import('virtual:vite-icons/feather/edit3')['default']

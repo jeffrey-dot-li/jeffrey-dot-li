@@ -13,7 +13,7 @@
     "preview": "vite preview",
     "preview-https": "serve dist",
     "prepare": "husky install",
-    "lint": "eslint ./src/**/*.{js,ts,tsx,vue,md,json}"
+    "lint": "eslint --fix ./src/**/*.{ts,vue,md}"
   },
   "husky": {
     "hooks": {
