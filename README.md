@@ -1,7 +1,12 @@
-###  Hi, I'm Jeffrey Li 🔥
+### Jeffrey Li 🔥
 
-- Here's my [CV](https://drive.google.com/file/d/1sRWCUq1E41osMeRo9lHx_2rq_EgFHyQC/view?usp=sharing). Did you know that CV stands for Curriculum Vitae? I think thats pretty cool 🚀
-- [jeffreydotli.me](https://jeffreydotli.me) is my personal website. If you're ever looking for my [portfolio](https://jeffreydotli.me/portfolio), my [writing](https://jeffreydotli.me/writing), or just a touch of color, feel free to take a look around 👍
+## ~~Frontend~~ ~~Backend~~ ~~Mobile~~ ~~Robotics~~ Everything Developer
+
+Never been one for labels 🏷️. I just really like building 🛠️. 
+
+- [CV](https://drive.google.com/file/d/1sRWCUq1E41osMeRo9lHx_2rq_EgFHyQC/view?usp=sharing).
+- [jeffreydotli.me](https://jeffreydotli.me)
+- [LinkedIn](https://www.linkedin.com/in/jeffrey-dot-li/)
 
 
 [![Jeffrey's GitHub stats](https://github-readme-stats.vercel.app/api?username=jeffrey-dot-li&theme=solarized-light)](https://github.com/anuraghazra/github-readme-stats)
