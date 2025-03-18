@@ -1,8 +1,4 @@
-### Jeffrey Li 🔥
-
-## ~~Frontend~~ ~~Backend~~ ~~Mobile~~ ~~Robotics~~ Everything Developer
-
-Never been one for labels 🏷️. I just really like building 🛠️. 
+### Jeffrey Li
 
 - [CV](https://drive.google.com/file/d/1sRWCUq1E41osMeRo9lHx_2rq_EgFHyQC/view?usp=sharing).
 - [jeffreydotli.me](https://jeffreydotli.me)
